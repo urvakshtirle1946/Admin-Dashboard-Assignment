@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialVerse Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SocialVerse Admin</h1>
+            <div class="search-container">
+                <input type="search" placeholder="Search...">
+            </div>
+            <nav>
+                <button aria-label="Notifications"><i class="fas fa-bell"></i></button>
+                <button aria-label="User Profile"><i class="fas fa-user"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Admin Dashboard</h2>
+        <div class="dashboard-grid">
+            <section class="card" id="user-management">
+                <h3>User Management</h3>
+                <p>Track user activity and referrals</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Activity</th>
+                            <th>Referrals</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <!-- User data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="card" id="content-moderation">
+                <h3>Content Moderation</h3>
+                <p>Monitor daily content metrics</p>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <h4>Views</h4>
+                        <p id="views-count">0</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Shares</h4>
+                        <p id="shares-count">0</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Comments</h4>
+                        <p id="comments-count">0</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Post Exits</h4>
+                        <p id="exits-count">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="analytics">
+                <h3>User Engagement Analytics</h3>
+                <p>Daily user activity metrics</p>
+                <canvas id="analytics-chart"></canvas>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
